@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Morgidge Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cuprum|Oranienbaum|Prata|Vollkorn" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <h3 class="header">Калкулатор за ипотечен кредит</h3>
+        <div class="input-box">
+            <form>
+
+                <div class="data-box">
+                    <div class="input">
+                        <!-- <input type="radio" name="radio" id="r_money_get" value="Mdebt"> -->
+<input type="text" autocomplete="off" oninput="filterInput(this, 2)" onblur="validateNumberOrFloat(this)" onkeypress="return floatNumbers(event);"
+     id="MDebt" name="MDebt"  step="1" min="0" required>
+                        <select class="select" id="cur">
+                            <option value="lv">лв.</option>
+                            <option value="dollar">$</option>
+                            <option value="pound">£</option>
+                            <option value="euro">€</option>
+                        </select>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="Mdebt">Размер на заема </label>
+                    </div>
+                    <p class="err-mess" id="err-mess-1"></p>
+                </div>
+
+                <div class="data-box">
+                    <div class="input">
+                        <!-- <input type="radio"name="radio" id="r_n_pay" value"MTerm"> -->
+                        <input type="text" autocomplete="off" oninput="filterInput(this, 2)" onblur="validateNumberOrFloat(this)" onkeypress="return floatNumbers(event);"  id="MTerm" name="MTerm" step="1" min="0" required>
+                        <select class="select" id="period">
+                            <option value="year">год.</option>
+                            <option value="month" selected="selected">мес.</option>
+                        </select>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="MTerm">Време за изплащане</label>
+                    </div>
+                    <p class="err-mess" id="err-mess-2"></p>
+                </div>
+
+                <div class="data-box">
+                    <div class="input">
+                        <!-- <input type="radio" name="radio" id="r_i_rate" value="IRate"> -->
+                        <input type="text" autocomplete="off" oninput="filterInput(this, 2)" onblur="validateNumberOrFloat(this)" onkeypress="return floatNumbers(event);" id="IRate" name="IRate" placeholder="3 -> 8" step="0.01" min="0" required>
+                        <span class="init">% </span>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="IRate">Лихва</label>
+                    </div>
+                    <p class="err-mess" id="err-mess-3"></p>
+                </div>
+
+                <div class="data-box">
+                    <div class="input">
+                        <!-- <input type="radio" name="radio" id="r_m_pay" value="m-paymant" checked> -->
+                        <input type="text" autocomplete="off" oninput="filterInput(this, 2)" onblur="validateNumberOrFloat(this)" onkeypress="return floatNumbers(event);" id="m-paymant" name="m-paymant" step="0.01" min="0">
+                        <span class="init" id="currency1">
+                            лв.
+                        </span>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="m-paymant">Месечна вноска</label>
+
+                    </div>
+                    <p class="err-mess" id="err-mess-4"></p>
+                </div>
+
+                <div class="data-box">
+                    <div class="input">
+                        <!-- <input type="radio" name="radio" id="r_w_pay " value="whole-price"> -->
+<input type="text" autocomplete="off" oninput="filterInput(this, 2)" onblur="validateNumberOrFloat(this)" onkeypress="return floatNumbers(event);" id="whole-price" name="whole-price" step="0.01" min="0">
+                        <span class="init" id="currency2">
+                            лв.
+                        </span>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label for="whole-price">Цяла сума</label>
+                    </div>
+                    <p class="err-mess" id="err-mess-5"></p>
+
+                </div>
+            </form>
+        </div>
+        <div class="buttons">
+            <p class="err-mess" id="err-mess-6"></p>
+            <button type="button" id="calc">Пресметни</button>
+            <button type="button" id="clear">Изчисти</button>
+        </div>
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+    crossorigin="anonymous"></script>
+<script src="js/main.js" ></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+/**************************
+        Basic styles
+**************************/
+
+body {
+    background-color: #00A6DC;
+    font-size: 25px;
+
+}
+
+.container {
+    max-width: 450px;
+    align-content: center;
+    margin: 10px auto;
+    /* margin: 10px 10px 10px 10px;
+    float: left; */
+    padding: 1.3rem;
+    background-color: white;
+    box-shadow: #626262 2px 2px 8px;
+}
+
+.header {
+    text-align: center;
+    color: #012243
+}
+
+/******************
+        Fonts
+*******************/
+
+    /* font-family: 'Oranienbaum',serif; */
+    /* font-family: 'Prata', serif; */
+    /* text-shadow: black 1px 1px 4px; */
+    /* font-family: 'Cuprum',sans-serif; */
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Vollkorn', serif; */
+
+
+input,
+select,
+.init {
+    font-family: 'Prata', serif;
+}
+
+label,
+button {
+    font-family: 'Comfortaa', cursive;
+}
+
+.header {
+    font-family: 'Comfortaa', cursive;
+}
+
+.err-mess {
+     font-family: 'Comfortaa',
+     cursive;
+}
+
+/******************
+        Form
+*******************/
+
+.data-box {
+    position: relative;
+    margin: 1.8rem 0;
+    width: 100%;
+    align-content: center;
+}
+
+/* iNPUT FIELD ======================*/
+
+.input {
+    display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    /* border-radius: 10px; */
+    padding: 0 3px;
+    overflow: hidden;
+    margin: 5px 0px;
+}
+
+/* INPUT TAG*/
+input[type=radio] {
+    /* min-width: 10px;s */
+    width: 5%;
+    border: none;
+}
+
+input[type=text] {
+    min-width: 90px;
+    max-width: 67%;
+    background: none;
+    color: #737373;
+    font-size: 18px;
+     padding: 3px 0px 3px 5px;
+    display: inline;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+    /* width: auto; */
+    transition: border-color .2s ease-out;
+    will-change: border-color;
+}
+
+input[type=text]::-webkit-inner-spin-button {
+    opacity: 0;
+    -webkit-appearance: none;
+}
+
+input[type=text] {
+    -moz-appearance: textfield;
+    /* appearance: textfield; */
+    margin: 0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+input:focus~.bar{
+    background: #168F81;
+}
+
+/* SELECTION TAG=======================*/
+
+select {
+    right: 5px;
+    text-align-last: right;
+    border: none;
+    color: #95ABC0;
+    position: relative;
+    width:  30%;
+    /* -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(dropdown.png) right / 20px no-repeat #fff;
+    padding-right: 20px; */
+}
+
+
+
+select:focus~.bar {
+    background: #5264AE;
+}
+
+/* SPAN  ======================*/
+
+.init {
+    width : 25%;
+    text-align-last: right;
+    float: right;
+    margin-right: 10px;
+    color: #95ABC0;
+}
+
+/* LABEL =========================*/
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    top: -20px;
+    font-size: 1.1rem;
+    color: #5264AE;
+}
+
+/* input:focus~label {
+    top: -20px;
+    font-size: 1.1rem;
+    color: #5264AE;
+}
+
+input:valid~label {
+    top: -20px;
+    font-size: 1.1rem;
+    color: #5264AE;
+} */
+
+/* ERROR MESS =======================*/
+.err-mess {
+    margin: 0px 10px;
+    font-size: 1.1rem;
+    color: red;
+}
+
+
+/* BAR =========================*/
+
+.bar {
+    position: relative;
+    display: block;
+    background: #BDBDBD;
+    content: '';
+    height: 2px;
+    width: 99%;
+    bottom: 1px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 5px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS  */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+/**********************
+        Button
+***********************/
+
+
+button {
+    background-color: #EA6645;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.8;
+    transition: 0.3s;
+    display: inline;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 1em 1em;
+    box-shadow: #1e1e1e 2px 2px 5px;
+    /* width: 39%; */
+    min-width: 80px;
+}
+#clear {
+    background-color: #c0c0c0;
+}
+#calc:hover {
+    /* background-color: #cf3c0a; */
+    opacity: 1;
+}
+
+@media screen and (max-width: 530px) {
+    .container {
+        margin: 5xp auto;
+        width: 90vw;
+        padding: 10px 10px;
+    }
+    .bottons {
+        font-size: 0.5em;
+    }
+    button {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    button {
+        padding: 0.8em 1.8em;
+    }
+}
